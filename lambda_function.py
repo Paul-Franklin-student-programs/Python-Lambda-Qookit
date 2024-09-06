@@ -10,6 +10,53 @@ def lambda_handler(event, context):
     elif event['request']['type'] == 'IntentRequest':
         intent_name = event['request']['intent']['name']
 
+        if intent_name == 'HelloWorldIntent':
+            return build_response("Hello, world!")
+
+        elif intent_name == 'GetRecipeSuggestionBasedOnPantryIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'GetNextStepInRecipeIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'ManuallyAddFoodItemsToPantryIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'GetRecipeSuggestionBasedOnPantryIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'FindRecipeByNameIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'FindRecipeByIngredientIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'FindRecipeByTypeIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'AddDietaryRestriction':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'AMAZON.CancelIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'AMAZON.HelpIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'AMAZON.StopIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'AMAZON.NavigateHomeIntent':
+            return build_response("FIXME: add response")
+
+        elif intent_name == 'AMAZON.FallbackIntent':
+            return build_response("FIXME: add response")
+
+        else:
+            return build_response("Sorry, I don't know that command.")
+
+    return build_response("Something went wrong. Please try again.")
+
 
 def build_response(speech_text):
     return {
