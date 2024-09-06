@@ -10,10 +10,7 @@ def lambda_handler(event, context):
     elif event['request']['type'] == 'IntentRequest':
         intent_name = event['request']['intent']['name']
 
-        if intent_name == 'HelloWorldIntent':
-            return build_response("Hello, world!")
-
-        elif intent_name == 'GetRecipeSuggestionBasedOnPantryIntent':
+        if intent_name == 'GetRecipeSuggestionBasedOnPantryIntent':
             return build_response("FIXME: add response")
 
         elif intent_name == 'GetNextStepInRecipeIntent':
